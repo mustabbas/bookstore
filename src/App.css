@@ -1,11 +1,11 @@
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 .Oval-2 {
-    width: 4.25rem;
-    height: 4.25rem;
-    border-style: solid;
-    border-width: 5px;
-    border-color: blue;
+  width: 4.25rem;
+  height: 4.25rem;
+  border-style: solid;
+  border-width: 5px;
+  border-color: blue;
 }
