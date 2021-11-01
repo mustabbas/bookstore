@@ -4,6 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+/.history
+/.eslintrc.json
+.stylelintrc.json
+.babelrc
 
 # testing
 /coverage
