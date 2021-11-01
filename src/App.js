@@ -1,4 +1,3 @@
-import './App.css';
 import Nav from './Nav.js';
 
 const App = () => (
