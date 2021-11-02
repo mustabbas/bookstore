@@ -1,7 +1,14 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books.js';
 import '../App.css';
 
-const BooksList = (props) => (
+const BooksList = (props) => {
+  const dispatch = useDispatch();
+  const removeBookFromoStore = (id) => {
+    dispatch(removeBook(id));
+  };
+  return (
     <div className ="container border mt-3 p-3">
     <div className="row">
         <div className="col m-3">
@@ -10,7 +17,7 @@ const BooksList = (props) => (
         <span>{props.Author}</span>
         <ul className ="d-flex">
             <li className ="m-3">Comments</li>
-            <li className ="m-3">Remove</li>
+            <li className ="m-3"><a href = "#" onClick ={() => removeBookFromoStore(props.id)}>Remove</a></li>
             <li className ="m-3">Edit</li>
         </ul>
         </div>
@@ -28,6 +35,7 @@ const BooksList = (props) => (
         </div>
     </div>
     </div>
-);
+  );
+};
 
 export default BooksList;
