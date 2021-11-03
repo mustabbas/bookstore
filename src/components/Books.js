@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BooksList from './BooksList.js';
 import BookAdd from './BookAdd.js';
-import { getBooks } from '../redux/books/books';
+import { getBooks } from '../redux/books/books.js';
 
 const Books = () => {
   const dispatch = useDispatch();
