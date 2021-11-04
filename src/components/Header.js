@@ -1,12 +1,15 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
+import '../App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => (
     <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
-            <Link to = '/'><a className="navbar-brand" href="#"> Bookstore CMS</a></Link>
+        <nav className="navbar navbar-expand-lg navbar-light bg-headere">
+            <div className="container">
+            <Link to = '/'><a className="navbar-brand" id ="navText" href="#"> Bookstore CMS</a></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />
                 </button>
@@ -23,6 +26,7 @@ const Header = () => (
                     </li>
                     </Link>
                 </ul>
+                <FontAwesomeIcon className = "faUserCircle" icon={faUserCircle} />
                 </div>
             </div>
         </nav>
