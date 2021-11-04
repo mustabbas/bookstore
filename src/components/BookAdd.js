@@ -14,9 +14,9 @@ const BookAdd = () => {
   const submitBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       title: data.title,
-      author: data.author,
+      category: data.Category,
     };
     dispatch(addBook(newBook));
   };
@@ -27,7 +27,7 @@ const BookAdd = () => {
     <form className="row">
         <div className="col-12 col-lg-6">
             <div className="input-group">
-            <input type="text" name = "title" onChange ={onChange} className="form-control" id="Author" placeholder="Book title" />
+            <input type="text" name = "title" onChange ={onChange} className="form-control" id="title" placeholder="Book title" />
             </div>
         </div>
         <div className="col-12 col-lg-2">
@@ -36,11 +36,11 @@ const BookAdd = () => {
             </div>
         </div>
         <div className="col-12 col-lg-2">
-            <select className="form-select" id="Category">
+            <select className="form-select" name ="Category" onChange ={onChange} id="Category">
             <option selected>Category</option>
-            <option value={1}>One</option>
-            <option value={2}>Two</option>
-            <option value={3}>Three</option>
+            <option value={'One'}>One</option>
+            <option value={'Two'}>Two</option>
+            <option value={'Three'}>Three</option>
             </select>
         </div>
         <div className="col-12 col-lg-2">

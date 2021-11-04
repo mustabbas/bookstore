@@ -12,7 +12,7 @@ const BooksList = (props) => {
     <div className ="container border mt-3 p-3">
     <div className="row">
         <div className="col m-3">
-        <span>Action</span>
+        <span>{props.category}</span>
         <h3>{props.title}</h3>
         <span>{props.Author}</span>
         <ul className ="d-flex">
