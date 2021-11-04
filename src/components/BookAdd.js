@@ -22,29 +22,31 @@ const BookAdd = () => {
   };
 
   return (
-    <div className = "container mt-3 mb-3">
-    <h3>ADD NEW BOOK</h3>
-    <form className="row">
-        <div className="col-12 col-lg-6">
+    <div className = "container rowForm-wrapper mt-3 mb-3">
+    <h3 className = "formTitle">ADD NEW BOOK</h3>
+    <form>
+      <div className = "row">
+        <div className="col-12 m-2 col-lg-6">
             <div className="input-group">
-            <input type="text" name = "title" onChange ={onChange} className="form-control" id="title" placeholder="Book title" />
+            <input type="text" name = "title" onChange ={onChange} className="placholder form-control" id="title" placeholder="Book title" />
             </div>
         </div>
-        <div className="col-12 col-lg-2">
+        <div className="col-12 m-2  col-lg-2">
             <div className="input-group">
-            <input type="text" name = "author" onChange ={onChange} className="form-control" id="Author" placeholder="Book Author" />
+            <input type="text" name = "author" onChange ={onChange} className="placholder form-control" id="Author" placeholder="Book Author" />
             </div>
         </div>
-        <div className="col-12 col-lg-2">
-            <select className="form-select" name ="Category" onChange ={onChange} id="Category">
+        <div className="col-12 m-2  col-lg-2">
+            <select className="placholder form-select" name ="Category" onChange ={onChange} id="Category">
             <option selected>Category</option>
             <option value={'One'}>One</option>
             <option value={'Two'}>Two</option>
             <option value={'Three'}>Three</option>
             </select>
         </div>
-        <div className="col-12 col-lg-2">
-            <button type="submit" onClick={submitBookToStore} className="btn btn-primary">Submit</button>
+        <div className="col-12 m-2  col-lg-2">
+            <button type="submit" onClick={submitBookToStore} className="RectangleSubmit btn btn-primary">Submit</button>
+        </div>
         </div>
     </form>
     </div>

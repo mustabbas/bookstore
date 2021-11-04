@@ -10,7 +10,6 @@ const Books = () => {
   useEffect(() => {
     dispatch(getBooks());
   }, []);
-
   const BookItem = [];
   const booklist = useSelector((data) => data.booksReducer.books);
   Object.entries(booklist).forEach((element) => {
